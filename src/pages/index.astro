@@ -1,0 +1,57 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import headerImage from "@/assets/illustration-hero.svg";
+---
+
+<MainLayout title="FEM | Order Summary Card Component" description="A Frontend Mentor Challenge">
+  <main
+    class="flex min-h-screen items-center justify-center bg-theme-blue-100 bg-[url('/pattern-background-desktop.svg')] bg-size-[100%_450px] bg-top bg-no-repeat px-6 py-20"
+  >
+    <article
+      class="max-w-md overflow-hidden rounded-[18px] bg-white shadow-2xl shadow-theme-blue-700/35"
+    >
+      <picture>
+        <Image src={headerImage} alt="" loading="eager" />
+      </picture>
+      <div class="p-6 text-center md:p-11">
+        <h1 class="text-2xl font-black text-theme-blue-950 md:text-[1.75rem]">Order Summary</h1>
+        <p class="mt-4 px-2 font-medium text-theme-gray-600 md:font-bold">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere
+          you like!
+        </p>
+
+        <div class="mt-5 flex items-center gap-x-5 rounded-2xl bg-theme-blue-50/60 p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+            ><g fill="none" fill-rule="evenodd"
+              ><circle cx="24" cy="24" r="24" fill="#DFE6FB"></circle><path
+                fill="#717FA6"
+                fill-rule="nonzero"
+                d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z"
+              ></path></g
+            ></svg
+          >
+          <div class="space-y-1">
+            <p class="text-sm font-black text-theme-blue-950 md:text-[1.0625rem]">Annual Plan</p>
+            <data value="59.99" class="text-sm font-bold text-theme-gray-600 md:text-[1.0625rem]"
+              >$59.99/year</data
+            >
+          </div>
+          <a
+            href="/"
+            class="ml-auto text-sm font-black text-theme-blue-700 underline hover:text-theme-blue-700/75 hover:no-underline md:text-[0.9375rem]"
+            >Change</a
+          >
+        </div>
+        <button
+          class="mt-8 w-full cursor-pointer rounded-xl bg-theme-blue-700 p-3 text-[0.9375rem] font-bold text-white shadow-xl shadow-theme-blue-700/25 hover:bg-theme-blue-700/75"
+          >Proceed to Payment</button
+        >
+        <button
+          class="mt-8 w-full cursor-pointer text-[0.9375rem] font-black text-theme-gray-600 hover:text-theme-blue-950"
+          >Cancel Order</button
+        >
+      </div>
+    </article>
+  </main>
+</MainLayout>

@@ -1,0 +1,28 @@
+// @ts-check
+import { defineConfig, fontProviders } from "astro/config";
+
+import tailwindcss from "@tailwindcss/vite";
+
+// https://astro.build/config
+export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        "astro/virtual-modules/transitions-router.js",
+        "astro/virtual-modules/transitions-types.js",
+        "astro/virtual-modules/transitions-events.js",
+        "astro/virtual-modules/transitions-swap-functions.js",
+      ],
+    },
+  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Red Hat Display",
+      cssVariable: "--font-redhatdisplay",
+      weights: [400, 500, 700, 900],
+      styles: ["normal"],
+    },
+  ],
+});
