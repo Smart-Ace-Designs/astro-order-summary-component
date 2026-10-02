@@ -6,7 +6,7 @@ import headerImage from "@/assets/illustration-hero.svg";
 
 <MainLayout title="FEM | Order Summary Card Component" description="A Frontend Mentor Challenge">
   <main
-    class="flex min-h-screen items-center justify-center bg-theme-blue-100 bg-[url('/pattern-background-desktop.svg')] bg-size-[100%_450px] bg-top bg-no-repeat px-6 py-20"
+    class="flex min-h-screen items-center justify-center bg-theme-blue-100 bg-[url('pattern-background-desktop.svg')] bg-size-[100%_450px] bg-top bg-no-repeat px-6 py-20"
   >
     <article
       class="max-w-md overflow-hidden rounded-[18px] bg-white shadow-2xl shadow-theme-blue-700/35"
@@ -38,7 +38,7 @@ import headerImage from "@/assets/illustration-hero.svg";
             >
           </div>
           <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             class="ml-auto text-sm font-black text-theme-blue-700 underline hover:text-theme-blue-700/75 hover:no-underline md:text-[0.9375rem]"
             >Change</a
           >
